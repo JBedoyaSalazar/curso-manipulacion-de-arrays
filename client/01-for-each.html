@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+
+    <script>
+        const products = [
+            {
+                name: 'Laptop',
+                price: 1000
+            },
+            {
+                name: 'Mouse',
+                price: 100
+            },
+            {
+                name: 'Keyboard',
+                price: 100
+            },
+            {
+                name: 'Monitor',
+                price: 100
+            },
+            {
+                name: 'Mousepad',
+                price: 100
+            }
+        ]
+
+        const app = document.getElementById('app');
+
+        products.forEach(product => {
+            app.innerHTML += `
+                <div>
+                    <h2>${product.name}</h2>
+                    <p>Precio: $${product.price}</p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
